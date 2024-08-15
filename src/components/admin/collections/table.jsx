@@ -35,7 +35,7 @@ const CollectionTable = ({ collections, handleDelete }) => {
     const navigate = useNavigate();
 
     const getCollectionUrl = (collectionId) => {
-        return `https://museum-gamma.vercel.app/collection/${collectionId}`;
+        return `https://museumntbproject.vercel.app/collection/${collectionId}`;
     };
 
     const handleDownload = async (collectionId) => {
