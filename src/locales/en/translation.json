@@ -1,0 +1,62 @@
+{
+  "menu": {
+    "home": "Home",
+    "visit": "Visit",
+    "collection": "Collection",
+    "contact": "Contact & Location",
+    "about": "About"
+  },
+  "home": {
+    "greeting": "Presenting Eternal Beauty and History",
+    "welcome": "Welcome to the West Nusa Tenggara Museum, a place where beauty and history meet to provide an unforgettable experience for visitors from all walks of life. Since its opening, we have been committed to being the guardian and link between the past and the present, presenting this precious cultural heritage in a form that inspires and educates. Every corner of this museum tells an exciting story about the long journey of humanity, from stunning classical art to historical artifacts that reveal the richness of culture that has existed for centuries.",
+    "paragraph1": "Enjoy an in-depth exploration into history through our diverse collections. From classic fine art to fascinating historical artifacts, each item tells a unique and fascinating story. Every visit is an opportunity to discover the beauty and diversity of the world, and to delve into the meaning behind each artifact on display.",
+    "heading1": "Explore the Collection of the West Nusa Tenggara Museum",
+    "paragraph2": "The West Nusa Tenggara Museum plays a very important role in documenting the collections in West Nusa Tenggara, which are invaluable to the history of Indonesia.",
+    "explore": "Visit Now"
+  },
+  "visit": {
+    "title": "Visit",
+    "paragraph1": "Operational Hours",
+    "paragraph2": "The West Nusa Tenggara Provincial Museum can be visited on Monday, Tuesday, and Wednesday from 08:00-16:00 WITA, on Thursday, Saturday, and Sunday from 08:00-15:30 WITA, and on Friday from 08:00-17:00 WITA.",
+    "paragraph3": "The West Nusa Tenggara Provincial Museum is closed for in-person visits on National Holidays.",
+    "paragraph4": "Ticket Prices for the West Nusa Tenggara Provincial Museum",
+    "paragraph5": "The entrance ticket prices are as follows:",
+    "paragraph6": "Children: Rp. 2,000 / person",
+    "paragraph7": "Students: Rp. 4,000 / person",
+    "paragraph8": "General: Rp. 6,000 / person",
+    "paragraph9": "Visiting Mechanism",
+    "paragraph10": "Visitors can come directly to the West Nusa Tenggara Provincial Museum and are required to make a reservation by filling out a form on the website. Then, make a cash payment to the ticket officer by showing the reservation. After that, visitors will receive a museum entry ticket.",
+    "paragraph11": "Visitors must comply with health protocols according to the applicable regulations while in the visit area, avoid touching the collections in the museum, and avoid leaving belongings with the staff."
+  },
+  "collection": {
+    "title": "Collection",
+    "category": "Category",
+    "year": "Year"
+  },
+  "contact": {
+    "title": "Contact & Location",
+    "address": "Address",
+    "email": "Email",
+    "telephone": "Telephone"
+  },
+  "about": {
+    "title": "About the Museum",
+    "paragraph1": "The International Council of Museums (ICOM) defines a museum as a non-profit institution that serves the wider community. It conducts research, collects, and exhibits historical artifacts that are open to the public. They operate and communicate ethically, professionally, and with community participation, offering a variety of experiences for education, enjoyment, reflection, and sharing knowledge.",
+    "paragraph2": "According to Government Regulation No. 66 of 2015 concerning Museums, it is explained that a museum is an institution that functions to protect, develop, utilize collections, and communicate them to the public. This Government Regulation is an implementation rule of the provisions of Article 18 paragraph (5) of Law No. 11 of 2010 concerning Cultural Heritage. With that, the Geological Museum stands to represent museums to the Indonesian public.",
+    "paragraph3": "1976-1981",
+    "paragraph4": "The State Museum of West Nusa Tenggara began to be established through the Museum Rehabilitation and Expansion Project in 1976.",
+    "paragraph5": "1982",
+    "paragraph6": "The State Museum of West Nusa Tenggara was inaugurated on January 23, 1982, by the Minister of Education and Culture of the Republic of Indonesia, Dr. Daoed Joesoef, based on the Decree of the Minister of Education and Culture No. 022/0/1/1982.",
+    "paragraph7": "1982-2000",
+    "paragraph8": "The State Museum of West Nusa Tenggara became an Implementation Unit (UPT) of the Directorate General of Culture.",
+    "paragraph9": "2000-2016",
+    "paragraph10": "The State Museum of West Nusa Tenggara was under the West Nusa Tenggara Provincial Government and became an Implementation Unit (UPTD) under the Department of Culture and Tourism of the West Nusa Tenggara Province.",
+    "paragraph11": "2017",
+    "paragraph12": "Since January 1, 2017, the State Museum of West Nusa Tenggara has been an Implementation Unit (UPTD) under the Department of Education and Culture of the West Nusa Tenggara Province."
+
+  },
+  "footer": {
+    "footer1": "Nusa Tenggara Museuum Museum is a museum that provides various information about earth aspects and is the only one in Indonesia.",
+    "footer2": "Contact & Location"
+  }
+}

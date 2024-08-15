@@ -1,0 +1,61 @@
+{
+  "menu": {
+    "home": "Bale",
+    "visit": "Betemue",
+    "collection": "Koleksi",
+    "contact": "Kontak & Lokasi",
+    "about": "Tentang"
+  },
+  "home": {
+    "greeting": "Sajian keindahan dait sejarah sak abadi",
+    "welcome": "Selamat datang lek Museum Nusa Tenggara Barat, tempat mbe taok mauk keindahan dait sejarah sak sajian pengalaman sak ndek bau telupak sik pengunjung lek berbagai kalangan. Ite wah berkomitmen jari penjage dait penghubung anatare masa lalu dait masa kini, elek tebukak pertame kali. Ite endah. persembahan warisan budaya sak berharge ini dalem bentuk sak menginspirasi dait mendidik. Bilang sudut museum niki ceritaan kisah sak asik tentang perjalanan umat manusia, elek mulai seni rupa klasik sak solah gati sampe artefak bersejarah sak kandungan makne budaya sak kaya sak arak selame ini.",
+    "paragraph1": "Silak rasak eksplorasi sak mendalem lek dalem sejarah elek koleksi ite sak beragam. Mulai leman seni rupa klasik, sampe artefak sejarah sak menarek, leman setiap item bercerite tentang kisah sak unik kance menakjubkan. Bilang kunjungan ye taok mauk kesempatan aden molah mauk gitak keindahan kance keragaman dunie.",
+    "heading1": "Silaq jelajah Koleksi Museum Nusa Tenggara Barat",
+    "paragraph2": "Museum Museum Nusa Tenggara Barat niki bedoe peran sak sangat penting untuk mendokumentasikan koleksi di Nusa Tenggara Barat  yang sangat berharga bagi sejarah dan Indonesia.",
+    "explore": "Silaq de datang"
+  },
+  "visit": {
+    "paragraph1": "Waktu Museum Bebukak",
+    "paragraph2": "Museum Provinsi Nusa Tenggara Barat bau tekunjungin elek jelo Senin, Selasa, dait Rabu elek jam 08:00-16:00 WITA, terus jelo Kamis, Sabtu, MInggu elek jam 08:00-15:30 WITA dait jelo jumat elek jam 08:00-17:00 WITA.",
+    "paragraph3": "Museum  Provinsi Nusa Tenggara Barat tutup untuk kunjungan secare langsung lek jelo Libur Nasional.",
+    "paragraph4": "Harga Tiket Museum  Provinsi Nusa Tenggara Barat",
+    "paragraph5": "Harga tiket masuk sebesar :",
+    "paragraph6": "Anak - Anak : Rp.2000 / orang",
+    "paragraph7": "Pelajar : Rp. 4.000 / orang ",
+    "paragraph8": "Umum : Rp.6000 / orang",
+    "paragraph9": "Mekanisme Kunjungan",
+    "paragraph10": "Pengunjung baun dateng langsung lek Museum Provinsi Nusa Tenggara Barat dait wajib reservasi juluk sik care reservasi liwat web. Setelah reservasi, antih pihak museum hubungi ite (pengunjung), setelah tehubungi sik pihak museum, pengunjung bau langsung dateng lek museum bajah pembayaran secare tunai lek petugas tiket. Kemudian pengunjung nyemauk tiket tame museum.",
+    "paragraph11": "Wajibt taati protokol kesehatan sesuai dait Titi tate sak berlaku selame lek area kunjungan, dendek goret-goret koleksi sak arak lek museum dait hindari nitip barang lek petugas sak pengunjung jauk."
+  },
+  "collection": {
+    "title": "Koleksi",
+    "category": "Kategori",
+    "year": "Tahun"
+  },
+  "contact": {
+    "title": "Kontak & Lokasi",
+    "address": "Alamat",
+    "email": "Surel",
+    "telephone": "Telepon"
+  },
+  "about": {
+    
+    "title": "Tentang Museum",
+    "paragraph1": "International Council of Museum (ICOM) definisian Museum jari lembaga non-profit sak melayani masyarakat luas. Arakpun   Museum niki gawek penelitian, dait pameran peninggalan sejarah sak terbuka untuk umum. Nie beroperasi dait berkomunikasi secare etis, profesional dait berpartisipasi kance masyarakat, tawaran beragem pengalaman untuk pendidikan, kesenangan, refleksi kance berbagai pengetahuan.",
+    "paragraph2": "Menurut Peraturan Pemerintah No. 66 Tahun 2015 tentang Museum, tejelasan bahwa museum niki adalah lembaga sak bedoe fungsi melindungi, mengembangkan, memanfaatkan koleksi, dait jari wadah komunikasi kance masyarakat. Peraturan Pemerintah niki adalah aturan pelaksanaan elek ketentuan Pasal 18 ayat (5) Undang-Undang Nomor 11 Tahun 2010 tentang Cagar Budaya. Dengan begitu, Museum Geologi arak jari representasi museum bagi masyarakat Indonesia.",
+    "paragraph3": "1976-1981",
+    "paragraph4": "Museum Negeri Nusa Tenggara Barat mulai dirintis melalui Proyek Rehabilitasi dan Perluasan Museum pada tahun 1976.",
+    "paragraph5" : "1982",
+    "paragraph6" : "Museum Negeri Nusa Tenggara Barat diresmikan pada tanggal 23 Januari 1982 oleh Menteri oleh Mendikbud RI Dr. Daoed Joesoef berdasarkan Surat Keputusan Mendikbud RI No. 022/0/1/1982.",
+
+    "paragraph7" : "1982-2000",
+    "paragraph8" : "Museum Negeri Nusa Tenggara Barat menjadi UPT (Unit Pelaksana Teknis) Diktorat Jenderal Kebudayaan.",
+
+     "paragraph9" : "2000-2016",
+     "paragraph10": "Museum Negeri Nusa Tenggara Barat bernaung di bawah Pemerintah Provinsi Nusa Tenggara Barat dan menjadi UPTD (Unit Pelaksana Teknis Dinas) pada Dinas Kebudayaan dan Pariwisata Provinsi Nusa Tenggara Barat.",
+
+     "paragraph11" : "2017",
+     "paragraph12" : "Sejak tanggal 1 Januari 2017, Museum Negeri Nusa Tenggara Barat merupakan UPTD pada Dinas Pendidikan dan Kebudayaan Provinsi Nusa Tenggara Barat"
+  
+  }
+}

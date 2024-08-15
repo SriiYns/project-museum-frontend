@@ -1,0 +1,74 @@
+{
+    "menu": {
+        "home": "Beranda",
+        "visit": "Kunjungan",
+        "collection": "Koleksi",
+        "contact": "Kontak & Lokasi",
+        "about": "Tentang",
+        "dashboard": "Dashboard",
+        "ticket": "Ticket",
+        "collection.create": "Buat Koleksi"
+    },
+    "home": {
+        "greeting": "Menyajikan Keindahan dan Sejarah yang Abadi",
+        "welcome": "Selamat datang di Museum Nusa Tenggara Barat, tempat di mana keindahan dan sejarah bertemu untuk memberikan pengalaman yang tak terlupakan kepada pengunjung dari berbagai kalangan. Sejak dibuka untuk pertama kalinya, kami berkomitmen untuk menjadi penjaga dan penghubung antara masa lalu dan masa kini, mempersembahkan warisan budaya yang berharga ini dalam bentuk yang menginspirasi dan mendidik. Setiap sudut museum ini menceritakan kisah yang mengasyikkan tentang perjalanan panjang umat manusia, dari seni rupa klasik yang memesona hingga artefak bersejarah yang mengungkapkan kekayaan budaya yang telah ada selama berabad-abad.",
+        "paragraph1": "Nikmati eksplorasi mendalam ke dalam sejarah melalui koleksi kami yang beragam. Mulai dari seni rupa klasik hingga artefak bersejarah yang memikat, setiap item menceritakan kisah yang unik dan menakjubkan. Setiap kunjungan adalah kesempatan untuk menemukan keindahan dan keragaman dunia, dan untuk mendalami makna di balik setiap artefak yang dipamerkan.",
+        "heading1": "Jelajahi Koleksi Museum Nusa Tenggara Barat",
+        "paragraph2": "Museum Museum Nusa Tenggara Barat memiliki peran yang sangat penting untuk mendokumentasikan koleksi di Nusa Tenggara Barat  yang sangat berharga bagi sejarah dan Indonesia.",
+        "explore": "Jelajahi Sekarang"
+    },
+    "visit": {
+        "title": "Kunjungan",
+        "paragraph1" : "Waktu Operasional",
+        "paragraph2" : "Museum Provinsi Nusa Tenggara Barat dapat dikunjungi pada hari Senin, Selasa dan Rabu dari jam 08:00-16:00 WITA, lalu hari Kamis, Sabtu, Minggu dari jam 08:00-15:30 WITA dan hari jumat dari jam 08:00-17:00 WITA.",
+        "paragraph3" : "Museum  Provinsi Nusa Tenggara Barat tutup untuk kunjungan secara langsung pada hari Libur Nasional.",
+        "paragraph4" : "Harga Tiket Museum  Provinsi Nusa Tenggara Barat",
+        "paragraph5" : "Harga tiket masuk sebesar :",
+        "paragraph6" : "Anak - Anak : Rp.2000 / orang",
+        "paragraph7" : "Pelajar : Rp. 4.000 / orang",
+        "paragraph8" : "Umum : Rp.6000 / orang",
+        "paragraph9" : "Mekanisme Kunjungan",
+        "paragraph10": "Pengunjung dapat datang langsung ke Museum  Provinsi Nusa Tenggara Barat dan wajib melakukan reservasi dengan cara mengisi form di website. Kemudian melakukan pembayaran secara tunai ke petugas tiket dengan menunjukan reservasinya. Kemudian pengunjung mendapatkan tiket masuk museum.",
+        "paragraph11": "Wajib menaati protokol kesehatan sesuai dengan ketentuan yang berlaku selama berada di area kunjungan, hindari menyentuh koleksi yang ada di museum dan hindari menitipkan barang bawaan kepada petugas."
+    },
+    "collection": {
+        "title": "Koleksi",
+        "description": "Museum Museum Nusa Tenggara Barat memiliki peran yang sangat penting untuk mendokumentasikan koleksi di Nusa Tenggara Barat  yang sangat berharga bagi sejarah dan Indonesia.",
+        "category": "Kategori",
+        "year": "Tahun"
+    },
+    "ticket": {
+        "title": "Pembelian Tiket",
+        "description": "Pembelian tiket harga yang diberikan oleh museum untuk penjunjung ke museum."
+    },
+    "contact": {
+        "title": "Kontak & Lokasi",
+        "address": "Alamat",
+        "email": "Surel",
+        "telephone": "Telepon"
+    },
+    "about": {
+        
+    "title": "Tentang Museum",
+    "paragraph1": "International Council of Museum (ICOM) mendefinisikan Museum sebagai sebuah lembaga non-profit yang melayani masyarakat luas. Adapun di dalamnya melakukan penelitian, mengumpulkan, dan memamerkan peninggalan sejarah yang terbuka untuk umum. Mereka beroperasi dan berkomunikasi secara etis, profesional, dan dengan partisipasi masyarakat, menawarkan beragam pengalaman untuk pendidikan, kesenangan, refleksi, dan berbagi pengetahuan.",
+    "paragraph2": "Menurut Peraturan Pemerintah 66 tahun 2015 tentang Museum, dijelaskan bahwa museum adalah lembaga yang berfungsi melindungi, mengembangkan, memanfaatkan koleksi, dan mengomunikasikannya kepada masyarakat. Peraturan Pemerintah ini merupakan aturan pelaksanaan dari ketentuan Pasal 18 ayat (5) Undang-Undang Nomor 11 Tahun 2010 tentang Cagar Budaya. Dengan itu, Museum Geologi berdiri untuk merepresentasikan museum kepada masyarakat Indonesia.",
+    "paragraph3": "1976-1981",
+    "paragraph4": "Museum Negeri Nusa Tenggara Barat mulai dirintis melalui Proyek Rehabilitasi dan Perluasan Museum pada tahun 1976.",
+    "paragraph5" : "1982",
+    "paragraph6" : "Museum Negeri Nusa Tenggara Barat diresmikan pada tanggal 23 Januari 1982 oleh Menteri oleh Mendikbud RI Dr. Daoed Joesoef berdasarkan Surat Keputusan Mendikbud RI No. 022/0/1/1982.",
+
+    "paragraph7" : "1982-2000",
+    "paragraph8" : "Museum Negeri Nusa Tenggara Barat menjadi UPT (Unit Pelaksana Teknis) Diktorat Jenderal Kebudayaan.",
+
+     "paragraph9" : "2000-2016",
+     "paragraph10": "Museum Negeri Nusa Tenggara Barat bernaung di bawah Pemerintah Provinsi Nusa Tenggara Barat dan menjadi UPTD (Unit Pelaksana Teknis Dinas) pada Dinas Kebudayaan dan Pariwisata Provinsi Nusa Tenggara Barat.",
+
+     "paragraph11" : "2017",
+     "paragraph12" : "Sejak tanggal 1 Januari 2017, Museum Negeri Nusa Tenggara Barat merupakan UPTD pada Dinas Pendidikan dan Kebudayaan Provinsi Nusa Tenggara Barat"
+  
+    },
+    "footer": {
+        "footer1": "Museum Negeri Nusa Tenggara Barat merupakan museum yang meyediakan berbagai informasi mengenai aspek kebumian dan satu-satunya yang ada di Indonesia.",
+        "footer2": "Kontak & Lokasi"
+    }
+}
