@@ -5,7 +5,7 @@ const AddTicket = () => {
 	return (
 		<div className='space-y-8'>
 			<Header
-				title='Tambah Tiket'
+				title='Tambah Tiket Disini'
 				description='Tambah data Tiket kunjungan Museum Nusa Tenggara Barat.'
 			/>
 
