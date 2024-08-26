@@ -3,7 +3,7 @@ import QrScanner from 'react-qr-scanner';
 import { X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import axios from './axios'; // Sesuaikan path jika diperlukan
+import axios from '@/lib/axios'; // Sesuaikan path jika diperlukan
 
 const ScanModal = ({ isOpen, onClose }) => {
     const [isProcessing, setIsProcessing] = useState(false);

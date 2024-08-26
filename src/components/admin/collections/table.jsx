@@ -30,7 +30,7 @@ import QRCode from 'qrcode.react';
 import QRCodeLib from 'qrcode';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
-import axios from './axios'; // Sesuaikan path jika diperlukan
+import axios from '@/lib/axios'; // Sesuaikan path jika diperlukan
 
 const CollectionTable = ({ collections, handleDelete }) => {
     const { t } = useTranslation();

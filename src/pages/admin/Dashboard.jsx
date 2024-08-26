@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import axios from './axios'; // Sesuaikan path jika diperlukan
+import axios from '@/lib/axios';
 
 import {
     Card,
