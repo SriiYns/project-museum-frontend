@@ -33,6 +33,28 @@ import { useTranslation } from 'react-i18next';
 const CollectionTable = ({ collections, handleDelete }) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
+    const [scanCounts, setScanCounts] = useState({}); // State to store scan counts
+
+    useEffect(() => {
+        // Fetch scan counts for each collection
+        const fetchScanCounts = async () => {
+            const counts = {};
+            for (const collection of collections) {
+                try {
+                    const response = await axios.get(
+                        `${process.env.REACT_APP_BACKEND_URL}/historyScanCollection/${collection._id}/count`
+                    );
+                    counts[collection._id] = response.data.count;
+                } catch (error) {
+                    console.error('Error fetching scan count', error);
+                }
+            }
+            setScanCounts(counts);
+        };
+    
+        fetchScanCounts();
+    }, [collections]);
+    
 
     const handleDownload = async (collectionId) => {
         try {
@@ -80,6 +102,10 @@ const CollectionTable = ({ collections, handleDelete }) => {
                             </TableHead>
                             <TableHead className='hidden md:table-cell'>
                                 QR Code
+                            </TableHead>
+                            //tabel untuk muncul jumlah
+                            <TableHead className='hidden md:table-cell'>
+                                Jumlah Scan
                             </TableHead>
                             <TableHead>
                                 <span className='sr-only'>Actions</span>
@@ -129,6 +155,12 @@ const CollectionTable = ({ collections, handleDelete }) => {
                                         value={`${window.location.origin}/collection/${collection._id}`}
                                         size={64}
                                     />
+                                </TableCell>
+                                //Tabel memunculkan angka scan
+                                <TableCell className='hidden md:table-cell'>
+                                    <p className='text-muted-foreground'>
+                                        {scanCounts[collection._id] || 0} {/* Display scan count */}
+                                    </p>
                                 </TableCell>
                                 <TableCell>
                                     <DropdownMenu>

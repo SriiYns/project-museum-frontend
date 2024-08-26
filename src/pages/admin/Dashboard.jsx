@@ -27,10 +27,41 @@ const DashboardPage = () => {
 	const navigate = useNavigate();
 	const { loading, error, collections } = useCollection();
 	const { loading: loadingUser, error: errorUser, users } = useUser();
+    const [scanCounts, setScanCounts] = useState({}); // State to store scan counts
+    const [lastScans, setLastScans] = useState({}); // State to store scan counts
 
 	React.useEffect(() => {
 		if (error || errorUser) navigate('/admin/dashboard');
 	}, [error, errorUser, navigate]);
+
+	//disini untuk tampilan data scan 
+	useEffect(() => {
+		const fetchScanData = async () => {
+			const counts = {};
+			const lastScans = {};
+			for (const collection of collections) {
+				try {
+					const [countResponse, lastScanResponse] = await Promise.all([
+						axios.get(
+							`${import.meta.env.VITE_API_URL}/historyScanCollection/${collection._id}/count`
+						),
+						axios.get(
+							`${import.meta.env.VITE_API_URL}/historyScanCollection/${collection._id}/lastScan`
+						),
+					]);
+					counts[collection._id] = countResponse.data.count;
+					lastScans[collection._id] = lastScanResponse.data.scanDate;
+				} catch (error) {
+					console.error('Error fetching scan data', error);
+				}
+			}
+			setScanCounts(counts);
+			setLastScans(lastScans);
+		};
+	
+		fetchScanData();
+	}, [collections]);
+	// penutup data scan
 
 	const statistics = React.useMemo(() => {
 		if (!collections) return [];
@@ -154,6 +185,56 @@ const DashboardPage = () => {
 						</Table>
 					</CardContent>
 				</Card>
+				//tampilan untuk card history scan 
+				<Card className='w-full'>
+					<CardHeader className='flex flex-row items-center'>
+						<div className='grid gap-2'>
+							<CardTitle>Riwayat Pengaksesan QR Code</CardTitle>
+							<CardDescription>
+								Histori Koleksi Terbaru.
+							</CardDescription>
+						</div>
+					</CardHeader>
+					<CardContent>
+						<Table>
+							<TableHeader>
+								<TableRow>
+									<TableHead>Date & Time</TableHead>
+									<TableHead className='text-left'>
+										Collection Name
+									</TableHead>
+									<TableHead className='text-right'>
+										Scan Count
+									</TableHead>
+								</TableRow>
+							</TableHeader>
+							<TableBody>
+								{collections.map((collection) => (
+									<TableRow
+										key={collection._id}
+										className='bg-white'>
+										<TableCell className='font-medium'>
+											{lastScans[collection._id]
+												? new Date(lastScans[collection._id]).toLocaleString()
+												: 'No scans yet'} {/* Menampilkan last scan */}
+										</TableCell>
+										<TableCell className='font-medium'>
+											{collection.judul_id ||
+												collection.judul_en ||
+												collection.judul_sasak}
+										</TableCell>
+										<TableCell className='text-center'>
+											<p className='text-muted-foreground'>
+												{scanCounts[collection._id] || 0} {/* Display scan count */}
+											</p>
+										</TableCell>
+									</TableRow>
+								))}
+							</TableBody>
+						</Table>
+					</CardContent>
+				</Card>
+				//penutup
 			</div>
 		</div>
 	);

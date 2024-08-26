@@ -4,14 +4,44 @@ import { X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const ScanModal = ({ isOpen, onClose }) => {
-	const navigate = useNavigate();
+	const [isProcessing, setIsProcessing] = useState(false); // State to track processing
+    const navigate = useNavigate();
 
-	const handleScan = (data) => {
-		if (data) {
-			navigate(`/collection/${data.text}`);
-			onClose();
+	const handleScan = async (data) => {
+		if (data && !isProcessing) {
+			setIsProcessing(true); // Set processing to true to prevent multiple scans
+	
+			try {
+				// Save scan data to the historyScanCollection table
+				const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/historyScanCollection`, {
+					collectionId: data.text,
+				});
+	
+				// Extract the ID from the URL
+				const cId = data.text;
+				const regex = /\/collection\/([a-zA-Z0-9]+)/;
+				const match = cId.match(regex);
+				if (match && match[1]) {
+					const extractedId = match[1];
+					console.log('Scanned collection ID:', extractedId);
+	
+					navigate(`/collection/${extractedId}`);
+				} else {
+					console.error('Invalid collection ID format');
+					// Optional: Display error message to user
+				}
+	
+				onClose(); // Close the scanner/modal
+			} catch (error) {
+				console.error('Error saving scan data:', error);
+				// Optional: Display error message to user
+			} finally {
+				setIsProcessing(false); // Reset processing flag after operation completes
+			}
 		}
 	};
+	
+
 
 	const handleError = (err) => {
 		console.error(err);
