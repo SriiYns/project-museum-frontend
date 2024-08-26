@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import axios from '@/lib/axios';
+import axios from '@/lib/axios'; // Ganti dengan 'axios' jika menggunakan URL langsung
 
 import {
     Card,
@@ -57,7 +57,7 @@ const DashboardPage = () => {
             setScanCounts(counts);
             setLastScans(lastScans);
         };
-    
+
         if (collections.length > 0) {
             fetchScanData();
         }
@@ -101,8 +101,8 @@ const DashboardPage = () => {
                 ))}
             </div>
 
-            <div className='grid gap-4 md:gap-8'>
-                <Card className='w-full'>
+            <div className='flex flex-col md:flex-row gap-4 md:gap-8'>
+                <Card className='w-full md:w-1/2'>
                     <CardHeader className='flex flex-row items-center'>
                         <div className='grid gap-2'>
                             <CardTitle>User Terbaru</CardTitle>
@@ -139,99 +139,101 @@ const DashboardPage = () => {
                     </CardContent>
                 </Card>
 
-                <Card className='w-full'>
-                    <CardHeader className='flex flex-row items-center'>
-                        <div className='grid gap-2'>
-                            <CardTitle>Koleksi Terbaru</CardTitle>
-                            <CardDescription>
-                                Koleksi Terbaru yang telah dibuat.
-                            </CardDescription>
-                        </div>
-                    </CardHeader>
-                    <CardContent>
-                        <Table>
-                            <TableHeader>
-                                <TableRow>
-                                    <TableHead>Judul</TableHead>
-                                    <TableHead className='text-right'>
-                                        Kategori
-                                    </TableHead>
-                                    <TableHead className='text-right'>
-                                        Tahun
-                                    </TableHead>
-                                </TableRow>
-                            </TableHeader>
-                            <TableBody>
-                                {collections.map((collection) => (
-                                    <TableRow
-                                        key={collection._id}
-                                        className='bg-white'>
-                                        <TableCell className='font-medium'>
-                                            {collection.judul_id ||
-                                                collection.judul_en ||
-                                                collection.judul_sasak}
-                                        </TableCell>
-                                        <TableCell className='text-right'>
-                                            <Badge>{collection.kategori}</Badge>
-                                        </TableCell>
-                                        <TableCell className='text-right'>
-                                            {collection.tahun}
-                                        </TableCell>
+                <div className='flex flex-col gap-4 w-full md:w-1/2'>
+                    <Card className='w-full'>
+                        <CardHeader className='flex flex-row items-center'>
+                            <div className='grid gap-2'>
+                                <CardTitle>Koleksi Terbaru</CardTitle>
+                                <CardDescription>
+                                    Koleksi Terbaru yang telah dibuat.
+                                </CardDescription>
+                            </div>
+                        </CardHeader>
+                        <CardContent>
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead>Judul</TableHead>
+                                        <TableHead className='text-right'>
+                                            Kategori
+                                        </TableHead>
+                                        <TableHead className='text-right'>
+                                            Tahun
+                                        </TableHead>
                                     </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </CardContent>
-                </Card>
+                                </TableHeader>
+                                <TableBody>
+                                    {collections.map((collection) => (
+                                        <TableRow
+                                            key={collection._id}
+                                            className='bg-white'>
+                                            <TableCell className='font-medium'>
+                                                {collection.judul_id ||
+                                                    collection.judul_en ||
+                                                    collection.judul_sasak}
+                                            </TableCell>
+                                            <TableCell className='text-right'>
+                                                <Badge>{collection.kategori}</Badge>
+                                            </TableCell>
+                                            <TableCell className='text-right'>
+                                                {collection.tahun}
+                                            </TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </CardContent>
+                    </Card>
 
-                <Card className='w-full'>
-                    <CardHeader className='flex flex-row items-center'>
-                        <div className='grid gap-2'>
-                            <CardTitle>Riwayat Pengaksesan QR Code</CardTitle>
-                            <CardDescription>
-                                Histori Koleksi Terbaru.
-                            </CardDescription>
-                        </div>
-                    </CardHeader>
-                    <CardContent>
-                        <Table>
-                            <TableHeader>
-                                <TableRow>
-                                    <TableHead>Date & Time</TableHead>
-                                    <TableHead className='text-left'>
-                                        Collection Name
-                                    </TableHead>
-                                    <TableHead className='text-right'>
-                                        Scan Count
-                                    </TableHead>
-                                </TableRow>
-                            </TableHeader>
-                            <TableBody>
-                                {collections.map((collection) => (
-                                    <TableRow
-                                        key={collection._id}
-                                        className='bg-white'>
-                                        <TableCell className='font-medium'>
-                                            {lastScans[collection._id]
-                                                ? new Date(lastScans[collection._id]).toLocaleString()
-                                                : 'No scans yet'}
-                                        </TableCell>
-                                        <TableCell className='font-medium'>
-                                            {collection.judul_id ||
-                                                collection.judul_en ||
-                                                collection.judul_sasak}
-                                        </TableCell>
-                                        <TableCell className='text-right'>
-                                            <p className='text-muted-foreground'>
-                                                {scanCounts[collection._id] || 0}
-                                            </p>
-                                        </TableCell>
+                    <Card className='w-full'>
+                        <CardHeader className='flex flex-row items-center'>
+                            <div className='grid gap-2'>
+                                <CardTitle>Riwayat Pengaksesan QR Code</CardTitle>
+                                <CardDescription>
+                                    Histori Koleksi Terbaru.
+                                </CardDescription>
+                            </div>
+                        </CardHeader>
+                        <CardContent>
+                            <Table>
+                                <TableHeader>
+                                    <TableRow>
+                                        <TableHead>Date & Time</TableHead>
+                                        <TableHead className='text-left'>
+                                            Collection Name
+                                        </TableHead>
+                                        <TableHead className='text-right'>
+                                            Scan Count
+                                        </TableHead>
                                     </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </CardContent>
-                </Card>
+                                </TableHeader>
+                                <TableBody>
+                                    {collections.map((collection) => (
+                                        <TableRow
+                                            key={collection._id}
+                                            className='bg-white'>
+                                            <TableCell className='font-medium'>
+                                                {lastScans[collection._id]
+                                                    ? new Date(lastScans[collection._id]).toLocaleString()
+                                                    : 'No scans yet'}
+                                            </TableCell>
+                                            <TableCell className='font-medium'>
+                                                {collection.judul_id ||
+                                                    collection.judul_en ||
+                                                    collection.judul_sasak}
+                                            </TableCell>
+                                            <TableCell className='text-right'>
+                                                <p className='text-muted-foreground'>
+                                                    {scanCounts[collection._id] || 0}
+                                                </p>
+                                            </TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </CardContent>
+                    </Card>
+                </div>
             </div>
         </div>
     );
