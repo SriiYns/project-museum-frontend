@@ -113,7 +113,48 @@ const CollectionTable = ({ collections, handleDelete }) => {
                     <TableBody>
                         {collections.map((collection) => (
                             <TableRow key={collection._id} className='bg-white'>
-                                {/* ... (kode lainnya tetap sama) ... */}
+                                
+                                <TableCell className='hidden md:table-cell'>
+                                    <div className='p-2 border rounded-lg border-zinc-200'>
+                                        <img
+                                            src={collection.image}
+                                            alt={collection.judul_id}
+                                            className='object-cover w-32 rounded-md aspect-square'
+                                        />
+                                    </div>
+                                </TableCell>
+                                <TableCell className='font-medium'>
+                                    <Link to={`/collection/${collection._id}`}>
+                                        {collection.judul_id}
+                                    </Link>
+                                </TableCell>
+                                <TableCell>
+                                    <Badge variant='outline'>
+                                        {collection.kategori}
+                                    </Badge>
+                                </TableCell>
+                                <TableCell>{collection.tahun}</TableCell>
+                                <TableCell className='hidden md:table-cell'>
+                                    <p className='text-muted-foreground line-clamp-2'>
+                                        {collection.deskripsi_id}
+                                    </p>
+                                </TableCell>
+                                <TableCell className='hidden md:table-cell'>
+                                    <p className='text-muted-foreground line-clamp-2'>
+                                        {collection.deskripsi_en}
+                                    </p>
+                                </TableCell>
+                                <TableCell className='hidden md:table-cell'>
+                                    <p className='text-muted-foreground line-clamp-2'>
+                                        {collection.deskripsi_sasak}
+                                    </p>
+                                </TableCell>
+                                <TableCell className='hidden md:table-cell'>
+                                    <QRCode
+                                        value={`${window.location.origin}/collection/${collection._id}`}
+                                        size={64}
+                                    />
+                                </TableCell>
                                 <TableCell className='hidden md:table-cell'>
                                     <p className='text-muted-foreground'>
                                         {scanCounts[collection._id] || 0}
