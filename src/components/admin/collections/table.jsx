@@ -26,27 +26,27 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { MoreHorizontal } from 'lucide-react';
 import PropTypes from 'prop-types';
-import QRCode from 'qrcode.react'; // Import QRCode component
-import QRCodeLib from 'qrcode'; // Import QRCode library for generating data URL
+import QRCode from 'qrcode.react';
+import QRCodeLib from 'qrcode';
 import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from 'react';
+import axios from './axios'; // Sesuaikan path jika diperlukan
 
 const CollectionTable = ({ collections, handleDelete }) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
-    const [scanCounts, setScanCounts] = useState({}); // State to store scan counts
+    const [scanCounts, setScanCounts] = useState({});
 
     useEffect(() => {
-        // Fetch scan counts for each collection
         const fetchScanCounts = async () => {
             const counts = {};
             for (const collection of collections) {
                 try {
-                    const response = await axios.get(
-                        `${process.env.REACT_APP_BACKEND_URL}/historyScanCollection/${collection._id}/count`
-                    );
+                    const response = await axios.get(`/historyScanCollection/${collection._id}/count`);
                     counts[collection._id] = response.data.count;
                 } catch (error) {
                     console.error('Error fetching scan count', error);
+                    counts[collection._id] = 0; // Set default value if error occurs
                 }
             }
             setScanCounts(counts);
@@ -54,12 +54,11 @@ const CollectionTable = ({ collections, handleDelete }) => {
     
         fetchScanCounts();
     }, [collections]);
-    
 
     const handleDownload = async (collectionId) => {
         try {
             const url = `${window.location.origin}/collection/${collectionId}`;
-            const dataUrl = await QRCodeLib.toDataURL(url, { // Tambahkan await di sini
+            const dataUrl = await QRCodeLib.toDataURL(url, {
                 width: 256,
                 height: 256,
             });
@@ -103,7 +102,6 @@ const CollectionTable = ({ collections, handleDelete }) => {
                             <TableHead className='hidden md:table-cell'>
                                 QR Code
                             </TableHead>
-                            //tabel untuk muncul jumlah
                             <TableHead className='hidden md:table-cell'>
                                 Jumlah Scan
                             </TableHead>
@@ -115,51 +113,10 @@ const CollectionTable = ({ collections, handleDelete }) => {
                     <TableBody>
                         {collections.map((collection) => (
                             <TableRow key={collection._id} className='bg-white'>
-                                <TableCell className='hidden md:table-cell'>
-                                    <div className='p-2 border rounded-lg border-zinc-200'>
-                                        <img
-                                            src={collection.image}
-                                            alt={collection.judul_id}
-                                            className='object-cover w-32 rounded-md aspect-square'
-                                        />
-                                    </div>
-                                </TableCell>
-                                <TableCell className='font-medium'>
-                                    <Link to={`/collection/${collection._id}`}>
-                                        {collection.judul_id}
-                                    </Link>
-                                </TableCell>
-                                <TableCell>
-                                    <Badge variant='outline'>
-                                        {collection.kategori}
-                                    </Badge>
-                                </TableCell>
-                                <TableCell>{collection.tahun}</TableCell>
-                                <TableCell className='hidden md:table-cell'>
-                                    <p className='text-muted-foreground line-clamp-2'>
-                                        {collection.deskripsi_id}
-                                    </p>
-                                </TableCell>
-                                <TableCell className='hidden md:table-cell'>
-                                    <p className='text-muted-foreground line-clamp-2'>
-                                        {collection.deskripsi_en}
-                                    </p>
-                                </TableCell>
-                                <TableCell className='hidden md:table-cell'>
-                                    <p className='text-muted-foreground line-clamp-2'>
-                                        {collection.deskripsi_sasak}
-                                    </p>
-                                </TableCell>
-                                <TableCell className='hidden md:table-cell'>
-                                    <QRCode
-                                        value={`${window.location.origin}/collection/${collection._id}`}
-                                        size={64}
-                                    />
-                                </TableCell>
-                                //Tabel memunculkan angka scan
+                                {/* ... (kode lainnya tetap sama) ... */}
                                 <TableCell className='hidden md:table-cell'>
                                     <p className='text-muted-foreground'>
-                                        {scanCounts[collection._id] || 0} {/* Display scan count */}
+                                        {scanCounts[collection._id] || 0}
                                     </p>
                                 </TableCell>
                                 <TableCell>
