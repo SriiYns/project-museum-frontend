@@ -3,40 +3,44 @@ import QrScanner from 'react-qr-scanner';
 import { X } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import axios from '@/lib/axios'; // Sesuaikan path jika diperlukan
+import axios from '@/lib/axios';
 
 const ScanModal = ({ isOpen, onClose }) => {
     const [isProcessing, setIsProcessing] = useState(false);
     const navigate = useNavigate();
 
     const handleScan = async (data) => {
+        // Log data yang dipindai untuk debugging
+        console.log('Scanned data:', data);
+
+        if (!data) {
+            console.warn('No data scanned');
+            return;
+        }
+
         if (data && !isProcessing) {
             setIsProcessing(true);
 
             try {
-                // Gunakan axios yang telah dikonfigurasi
+                const collectionId = data.text;
+                console.log('Scanned collection ID:', collectionId);
+
+                // Mengirim request ke backend
                 const response = await axios.post('/historyScanCollection', {
-                    collectionId: data.text,
+                    collectionId,
                 });
 
-                // Extract the ID from the URL
-                const cId = data.text;
-                const regex = /\/collection\/([a-zA-Z0-9]+)/;
-                const match = cId.match(regex);
-                if (match && match[1]) {
-                    const extractedId = match[1];
-                    console.log('Scanned collection ID:', extractedId);
-
-                    navigate(`/collection/${extractedId}`);
+                // Memverifikasi response dari backend
+                if (response.status === 200) {
+                    navigate(`/collection/${collectionId}`);
+                    onClose(); // Tutup modal setelah berhasil scan
                 } else {
-                    console.error('Invalid collection ID format');
-                    // Optional: Display error message to user
+                    console.error('Failed to save scan data, server returned status:', response.status);
+                    // Tampilkan pesan kesalahan jika diperlukan
                 }
-
-                onClose(); // Close the scanner/modal
             } catch (error) {
                 console.error('Error saving scan data:', error);
-                // Optional: Display error message to user
+                // Tampilkan pesan kesalahan jika diperlukan
             } finally {
                 setIsProcessing(false);
             }
@@ -44,7 +48,7 @@ const ScanModal = ({ isOpen, onClose }) => {
     };
 
     const handleError = (err) => {
-        console.error(err);
+        console.error('QR Scan error:', err);
     };
 
     return isOpen ? (
